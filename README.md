@@ -177,7 +177,7 @@ The rtsp access is:
 
 The camera wont access the cloud anymore.
 
-You can get serrial 115200,8,N,1 on these pins
+You can get serrial 115200,8,N,1 on these pins, ... yuk I have not seen these ugly soldering
 
 ![alt text](https://github.com/comarius/digoo-DG-MIQ-720p/blob/master/digoo.png "serial")
 

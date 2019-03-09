@@ -1,8 +1,6 @@
 # digoo-DG-MIQ-720p
 DIGOO DG-MIQ Notes
 
-**I you find these appropriate, you can add them to the readme.**
-
 The serial (I have no picture) pins are by the side of the micros SD card. The pins are Rx Gnd Tx, and they are 3 little soldering pads with holes.
 
 Telnet was enabled by default.

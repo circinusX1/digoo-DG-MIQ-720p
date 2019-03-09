@@ -122,7 +122,7 @@ Edit start.sh, Look for: <<<<
 echo V > /dev/watchdog  ## if you don't want watchdog <<<<<<<<<<<
 #/bin/wpa_supplicant -B B -Dwext -iwlan0 -c/home/wpa_supplicant.conf &
 # exit # <<<<<  you can exit and run the /tmp/p2pcam   manually
-
+https://github.com/reedcrif/DG-M1Q
 cd /tmp
 (
 export CLOSELICAMERA_LOGMAXLINE=1000
@@ -181,3 +181,5 @@ You can get serrial 115200,8,N,1 on these pins, ... yuk I have not seen these ug
 
 ![alt text](https://github.com/comarius/digoo-DG-MIQ-720p/blob/master/digoo.png "serial")
 
+
+### references: https://github.com/reedcrif/DG-M1Q

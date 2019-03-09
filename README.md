@@ -1,5 +1,5 @@
 # digoo-DG-MIQ-720p
-DIGOO DG-MIQ Notes
+### DIGOO DG-MIQ Notes
 
 The serial (I have no picture) pins are by the side of the micros SD card. The pins are Rx Gnd Tx, and they are 3 little soldering pads with holes.
 
@@ -148,6 +148,32 @@ ifconfig wlan0 192.168.1.233 netmask 255.255.255.0
 route add default gw 192.168.1.1 wlan0
 
 ```
+
+The rtsp password is in: 
+```
+# cat /home/hwcfg.ini 
+[config]
+model = CloudCam
+sensor_position = 0
+ir_detect_type = 2
+adc_setting_max = -500
+adc_setting_min = 600
+support_allid = 1
+support_onvif = 1
+passwd = dg20160404  # <<<<   here
+support_mp4record = 1# 
+
+```
+The rtsp access is:
+
+    -   ffplay rtsp://admin:dg20160404@192.168.1.148/
+    -or
+    -   ffplay rtsp://admin:dg20160404@192.168.1.148/onvif1
+    -worksd as well as
+    -   ffplay rtsp://admin:dg20160404@192.168.1.148/onvif0
+
+
+
 
 The camera wont access the cloud anymore.
 

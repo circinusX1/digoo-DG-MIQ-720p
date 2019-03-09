@@ -150,3 +150,8 @@ route add default gw 192.168.1.1 wlan0
 ```
 
 The camera wont access the cloud anymore.
+
+You can get serrial 115200,8,N,1 on these pins
+
+![alt text](https://github.com/comarius/digoo-DG-MIQ-720p/blob/master/digoo.png "serial")
+

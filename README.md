@@ -96,7 +96,7 @@ upnsdid=1555410
 cloudtoken=magic:screw_this-----
 clouddid=SCREW_THIS
 #clouddid=******
-configmotiondetection=1
+http://comarius.blogspot.com/configmotiondetection=1
 devled=1
 devinfrared=1
 devnightmode=2
@@ -182,4 +182,14 @@ You can get serrial 115200,8,N,1 on these pins, ... yuk I have not seen these ug
 ![alt text](https://github.com/comarius/digoo-DG-MIQ-720p/blob/master/digoo.png "serial")
 
 
+# get file system
+
+```
+#pc / pre pare a nfs folder let's say /nfs
+# camera telnet shell
+PC: mkdir  /home/nfs
+mount -t nfs -o nolock PC_IP:/nfs /home/nfs
+ln -s / /home/nfs/rootfs
+# now copy the root filesystem on the PC.
 ### references: https://github.com/reedcrif/DG-M1Q
+### git clone https://github.com/TuyaInc/TUYA_IPC_SDK   samples, toolchain and such...

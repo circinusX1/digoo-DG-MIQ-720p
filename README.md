@@ -193,3 +193,25 @@ ln -s / /home/nfs/rootfs
 # now copy the root filesystem on the PC.
 ### references: https://github.com/reedcrif/DG-M1Q
 ### git clone https://github.com/TuyaInc/TUYA_IPC_SDK   samples, toolchain and such...
+```
+
+# get motion notification
+
+```
+curl http://192.168.1.148:3201/
+
+EVENT: MOTION detect.
+gk_isp_daynight sensorModel 32770
+getVideoStandard : 0
+[gk_isp_daynight]gadi_venc_set_framerate:streamid:0,fps:8 
+[gk_isp_daynight]gadi_venc_set_framerate:streamid:1,fps:8 
+gk_isp_daynight: set night mode
+----------------->sensorModel == GADI_ISP_SENSOR_GC1034, turn to night!
+sync time failed
+#####IR CUT in Night Mode.
+sync time failed
+sync time failed
+sync time failed
+sync time failed
+
+```

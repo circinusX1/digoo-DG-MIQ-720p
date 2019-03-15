@@ -215,3 +215,10 @@ sync time failed
 sync time failed
 
 ```
+
+# get jpeg snapshot
+
+```
+http://192.168.1.148:8001/snapshot
+
+```

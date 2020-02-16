@@ -202,11 +202,11 @@ mkdir  /home/nfs
 chmod 777 /home/nfs
 
 mount -t nfs -o nolock PC_IP:/NFS /home/nfs
-ln -s / /home/nfs/rootfs
+# copy files from camera /<whatever>  to /home/nfs/  and get them on your pc
+# 
 ### PC SHELL
 cd /NFS
-# you should see the rootfs of the camera
-# now copy the root filesystem on the PC.
+# you should see the files from camera, copy back and forward
 ### references: https://github.com/reedcrif/DG-M1Q
 ### git clone https://github.com/TuyaInc/TUYA_IPC_SDK   samples, toolchain and such...
 ```

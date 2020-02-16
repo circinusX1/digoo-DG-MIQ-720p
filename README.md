@@ -186,8 +186,16 @@ You can get serrial 115200,8,N,1 on these pins, ... yuk I have not seen these ug
 
 ```
 #pc / pre pare a nfs folder let's say /nfs
-# camera telnet shell
+## PC shell:
+edit /etc/exports and add
+/NFS       192.168.1.0/24(rw,fsid=0,insecure,no_subtree_check,async)
+save
+sudo service nfs-kernel-server restart
+exportfs -a
+
+## camera telnet shell
 PC: mkdir  /home/nfs
+
 mount -t nfs -o nolock PC_IP:/nfs /home/nfs
 ln -s / /home/nfs/rootfs
 # now copy the root filesystem on the PC.

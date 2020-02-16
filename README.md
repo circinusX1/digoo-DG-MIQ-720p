@@ -187,17 +187,25 @@ You can get serrial 115200,8,N,1 on these pins, ... yuk I have not seen these ug
 ```
 #pc / pre pare a nfs folder let's say /nfs
 ## PC shell:
+sudo mkdir /NFS
+chmod 777 /NFS
+chown $USER:$USER /NFS
 edit /etc/exports and add
 /NFS       192.168.1.0/24(rw,fsid=0,insecure,no_subtree_check,async)
 save
 sudo service nfs-kernel-server restart
-exportfs -a
+sudo exportfs -a
+sudo exportfs -rv
 
 ## camera telnet shell
-PC: mkdir  /home/nfs
+mkdir  /home/nfs
+chmod 777 /home/nfs
 
-mount -t nfs -o nolock PC_IP:/nfs /home/nfs
+mount -t nfs -o nolock PC_IP:/NFS /home/nfs
 ln -s / /home/nfs/rootfs
+### PC SHELL
+cd /NFS
+# you should see the rootfs of the camera
 # now copy the root filesystem on the PC.
 ### references: https://github.com/reedcrif/DG-M1Q
 ### git clone https://github.com/TuyaInc/TUYA_IPC_SDK   samples, toolchain and such...
